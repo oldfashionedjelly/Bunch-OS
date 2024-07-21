@@ -6,6 +6,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">  
         <link href="style.css" rel="stylesheet" type="text/css" media="all">
+        <script type="module" src="./script.js"></script>
     </head>
     
     <body style="background-image:url(./img_two.jpeg);background-size: cover;">
@@ -21,44 +22,41 @@
             </p>
         </div>
     
-        <div id="welcome"
-        style="border: solid; display: flex; flex-direction: column; border-radius: 16px; position: absolute; top: calc(50% - 90px); left: calc(50% - 180px); backdrop-filter: blur(4px); background-color: rgba(0, 0, 0, 0.125); ">
-        <div id="welcomeheader"
-        style="width: 100%; display: flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 8px;">
-              <div id="welcomeclose" style="width: 16px; height: 16px; cursor: pointer; background-color: #EC6B5E; border-radius: 16px; border: solid 1px rgba(0, 0, 0, 0.25); margin-left: 6px;"></div>
-  
-        <p style="margin: 0px; color: #fff; font-weight: 500">Welcome</p>
-        <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
-      </div>
-        <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 360px; padding: 16px;">
-            <style>
-                body {
-                    font-family: 'Special Elite', cursive;
-                    color: #000;
-                }
-    
-                a:link, a:visited {
-                    background-color: #f44336;
-                    color: white;
-                    padding: 15px 25px;
-                    text-align: center;
-                    text-decoration: none;
-                    display: inline-block;
-                }
-                
-                a:hover, a:active {
-                    background-color: red;
-                }
-            </style>
-            <h1 style="font-family: 'Special Elite', cursive; color: black; text-align: center;">Welcome to BunchOS</h1>
-            <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
-                <a href="https://github.com/oldfashionedjelly" target="_blank">Github</a>
-                <a href="https://open.spotify.com/user/t3a4dr31rhetktzq3neijd4z3" target="_blank">Spotify</a>
-                <a href="https://oldfashionedjelly.github.io/" target="_blank">Website</a>
+        <div class="window" id="welcome">
+            <div class="windowheader" id="welcomeheader">
+                <div class="closebutton" id="welcomeclose"></div>
+                <p class="headertext">Welcome</p>
+                <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
             </div>
-            <img src="./robot.png" style="width: 100%; border-radius: 8px;"/>
+            <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 360px; padding: 16px;">
+                <style>
+                    body {
+                        font-family: 'Special Elite', cursive;
+                        color: #000;
+                    }
+        
+                    a:link, a:visited {
+                        background-color: #f44336;
+                        color: white;
+                        padding: 15px 25px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                    }
+                    
+                    a:hover, a:active {
+                        background-color: red;
+                    }
+                </style>
+                <h1 style="font-family: 'Special Elite', cursive; color: black; text-align: center;">Welcome to BunchOS</h1>
+                <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+                    <a href="https://github.com/oldfashionedjelly" target="_blank">Github</a>
+                    <a href="https://open.spotify.com/user/t3a4dr31rhetktzq3neijd4z3" target="_blank">Spotify</a>
+                    <a href="https://oldfashionedjelly.github.io/" target="_blank">Website</a>
+                </div>
+                <img src="./robot.png" style="width: 100%; border-radius: 8px;"/>
+            </div>
         </div>
-      </div>
         <script src="script.js"></script>
     </body>
     
