@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bunch OS</title>
+        <title>BunchOS</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">  
@@ -9,6 +9,30 @@
     </head>
     
     <body style="background-image:url(./img_two.jpeg);background-size: cover;">
+        <div
+        style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.125); color: #fff; justify-content: space-between; gap: 16px;">
+            <p
+              style="margin: 8px; font-weight: 700; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">
+            BunchOS
+            </p>
+            <p style="margin: 8px; background-color: rgba(256, 256, 256, 0.25); padding: 4px 12px; border-radius: 16px; text-align: center;">
+                "The Internet? We are not interested in it."
+            </p>
+            <p id="timeElement"
+              style="margin: 8px; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">
+            6/21/2023 3:41 PM
+            </p>
+        </div>
+
+        <script>
+            function updateTime() {
+                var currentTime = new Date().toLocaleString();
+                var timeText = document.querySelector("#timeElement");
+                timeText.innerHTML = currentTime;
+            }
+            setInterval(updateTime, 1000);
+        </script>
+
         <div style="border:solid; width:340px; padding:14px; border-radius:16px;position: absolute; top: 50%; left: 50%; 
 transform: translate(-50%, -50%);background-color: #000000;">
             <style>
