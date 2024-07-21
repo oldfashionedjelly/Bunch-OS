@@ -49,27 +49,25 @@ function dragElement(element) {
 }
 
 function closeWindow(element) {
-    element.style.display = "none"
+    element.style.display = "none";
 }
 
 function openWindow(element) {
-  element.style.display = "flex"
+  element.style.display = "flex";
+  biggestIndex++; 
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
 }
 
 
-var welcomeScreen = document.querySelector("#welcome")
-var welcomeScreenClose = document.querySelector("#welcomeclose")
-var welcomeScreenOpen = document.querySelector("#welcomeopen")
 
 
-welcomeScreenClose.addEventListener("click", function() {
-    closeWindow(welcomeScreen);
-  });
-  
-welcomeScreenOpen.addEventListener("click", function() {
-    openWindow(welcomeScreen);
-  });
+var welcomeScreen = document.querySelector("#welcome");
+var welcomeScreenClose = document.querySelector("#welcomeclose");
+var welcomeScreenOpen = document.querySelector("#welcomeopen");
 
+welcomeScreenClose.addEventListener("click",() => closeWindow(welcomeScreen));
+welcomeScreenOpen.addEventListener("click",() => openWindow(welcomeScreen));
 
 var projectScreen = document.querySelector("#project_post");
 var projectScreenClose = document.querySelector("#projectclose");
@@ -77,3 +75,23 @@ var projectScreenOpen = document.querySelector("#projectopen");
 
 projectScreenClose.addEventListener("click", () => closeWindow(projectScreen));
 projectScreenOpen.addEventListener("click", () => openWindow(projectScreen));
+
+
+addWindowTapHandling(welcomeScreen);
+addWindowTapHandling(projectScreen);
+
+
+var topBar = document.querySelector("#top")
+
+var biggestIndex = 1;
+function addWindowTapHandling(element) {
+    element.addEventListener("mousedown", () =>
+      handleWindowTap(element)
+    )
+}
+
+function handleWindowTap(element) {
+    biggestIndex++; 
+    element.style.zIndex = biggestIndex;
+    topBar.style.zIndex = biggestIndex + 1;
+}
