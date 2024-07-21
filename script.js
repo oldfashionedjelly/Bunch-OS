@@ -69,28 +69,11 @@ welcomeScreenClose.addEventListener("click", function() {
 welcomeScreenOpen.addEventListener("click", function() {
     openWindow(welcomeScreen);
   });
-  
-var projectScreen = document.querySelector("#project_post")
-var projectScreenClose = document.querySelector("#projectclose")
+
+
+var projectScreen = document.querySelector("#project_post");
+var projectScreenClose = document.querySelector("#projectclose");
+var projectScreenOpen = document.querySelector("#projectopen");
+
 projectScreenClose.addEventListener("click", () => closeWindow(projectScreen));
-
-var selectedIcon = undefined;
-
-function selectIcon(element) {
-    element.classList.add("selected");
-    selectedIcon = element;
-}
-
-function deselectIcon(element) {
-    element.classList.remove("selected");
-    selectedIcon = undefined
-}
-
-function handleIconTap(element) {
-    if (element.classList.contains("selected")) {
-      deselectIcon(element)
-      openWindow(document.querySelector("#window"))
-    } else {
-      selectIcon(element)
-    }
-}
+projectScreenOpen.addEventListener("click", () => openWindow(projectScreen));
