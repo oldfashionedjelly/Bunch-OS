@@ -8,7 +8,7 @@ setInterval(updateTime, 1000);
 
 
 
-dragElement(document.getElementById("welcome"));
+document.querySelectorAll(".window").forEach(dragElement);
 
 function dragElement(element) {
   var initialX = 0;
@@ -48,12 +48,6 @@ function dragElement(element) {
   }
 }
 
-
-var welcomeScreen = document.querySelector("#welcome")
-
-var welcomeScreenClose = document.querySelector("#welcomeclose")
-var welcomeScreenOpen = document.querySelector("#welcomeopen")
-
 function closeWindow(element) {
     element.style.display = "none"
 }
@@ -61,6 +55,12 @@ function closeWindow(element) {
 function openWindow(element) {
   element.style.display = "flex"
 }
+
+
+var welcomeScreen = document.querySelector("#welcome")
+var welcomeScreenClose = document.querySelector("#welcomeclose")
+var welcomeScreenOpen = document.querySelector("#welcomeopen")
+
 
 welcomeScreenClose.addEventListener("click", function() {
     closeWindow(welcomeScreen);
@@ -70,6 +70,9 @@ welcomeScreenOpen.addEventListener("click", function() {
     openWindow(welcomeScreen);
   });
   
+var projectScreen = document.querySelector("#project_post")
+var projectScreenClose = document.querySelector("#projectclose")
+projectScreenClose.addEventListener("click", () => closeWindow(projectScreen));
 
 var selectedIcon = undefined;
 
@@ -81,4 +84,13 @@ function selectIcon(element) {
 function deselectIcon(element) {
     element.classList.remove("selected");
     selectedIcon = undefined
+}
+
+function handleIconTap(element) {
+    if (element.classList.contains("selected")) {
+      deselectIcon(element)
+      openWindow(document.querySelector("#window"))
+    } else {
+      selectIcon(element)
+    }
 }

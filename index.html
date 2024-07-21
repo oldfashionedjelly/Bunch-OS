@@ -22,12 +22,12 @@
             </p>
         </div>
 
-        <div class="selected" id="desktopApps" style="padding-top: 64px;">
-            <div style="text-align: center; padding: 16px; filter: drop-shadow(0 0 8px black); width: fit-content">
+        <div id="desktopApps" style="padding-top: 64px;">
+            <div class="selected" style="text-align: center; padding: 16px; filter: drop-shadow(0 0 8px black); width: fit-content">
               <img src="./project_post.png" style="width: 64px; height: 64px; border-radius: 16px;">
               <p style="margin: 0px; color: #fff;">Project Post</p>
             </div>
-          </div>
+        </div>
     
         <div class="window" id="welcome">
             <div class="windowheader" id="welcomeheader">
@@ -64,6 +64,27 @@
                 <img src="./robot.png" style="width: 100%; border-radius: 8px;"/>
             </div>
         </div>
+
+        <div class="window" id="project_post" style="display: none;">
+            <div class="windowheader" id="projectheader">
+                <div class="closebutton" id="projectclose"></div>
+                <p class="headertext">Project Post</p>
+                <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
+            </div>
+            <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 360px; padding: 16px;">
+                <style>
+                    body {
+                        font-family: 'Special Elite', cursive;
+                        color: #000;
+                    }
+                </style>
+                <h1 style="font-family: 'Special Elite', cursive; color: black; text-align: center;">Project Post</h1>
+                <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+                    <p>Project Post</p>
+                </div>
+            </div>
+        </div>
+
         <script src="script.js"></script>
     </body>
     
