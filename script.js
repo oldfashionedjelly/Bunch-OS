@@ -61,7 +61,6 @@ function openWindow(element) {
 
 
 
-
 var welcomeScreen = document.querySelector("#welcome");
 var welcomeScreenClose = document.querySelector("#welcomeclose");
 var welcomeScreenOpen = document.querySelector("#welcomeopen");
@@ -77,13 +76,15 @@ projectScreenClose.addEventListener("click", () => closeWindow(projectScreen));
 projectScreenOpen.addEventListener("click", () => openWindow(projectScreen));
 
 
-addWindowTapHandling(welcomeScreen);
-addWindowTapHandling(projectScreen);
 
+
+
+document.querySelectorAll(".window").forEach(addWindowTapHandling);
 
 var topBar = document.querySelector("#top")
 
 var biggestIndex = 1;
+
 function addWindowTapHandling(element) {
     element.addEventListener("mousedown", () =>
       handleWindowTap(element)
