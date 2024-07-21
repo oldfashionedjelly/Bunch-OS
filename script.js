@@ -75,6 +75,19 @@ var projectScreenOpen = document.querySelector("#projectopen");
 projectScreenClose.addEventListener("click", () => closeWindow(projectScreen));
 projectScreenOpen.addEventListener("click", () => openWindow(projectScreen));
 
+var libraryScreen = document.querySelector("#library");
+var libraryScreenClose = document.querySelector("#libraryclose");
+var libraryScreenOpen = document.querySelector("#libraryopen");
+
+libraryScreenClose.addEventListener("click", () => closeWindow(libraryScreen));
+libraryScreenOpen.addEventListener("click", () => openWindow(libraryScreen));
+
+var canvasScreen = document.querySelector("#canvas");
+var canvasScreenClose = document.querySelector("#canvasclose");
+var canvasScreenOpen = document.querySelector("#canvasopen");
+
+canvasScreenClose.addEventListener("click", () => closeWindow(canvasScreen));
+canvasScreenOpen.addEventListener("click", () => openWindow(canvasScreen));
 
 
 
