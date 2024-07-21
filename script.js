@@ -66,7 +66,19 @@ welcomeScreenClose.addEventListener("click", function() {
     closeWindow(welcomeScreen);
   });
   
-  welcomeScreenOpen.addEventListener("click", function() {
+welcomeScreenOpen.addEventListener("click", function() {
     openWindow(welcomeScreen);
   });
   
+
+var selectedIcon = undefined;
+
+function selectIcon(element) {
+    element.classList.add("selected");
+    selectedIcon = element;
+}
+
+function deselectIcon(element) {
+    element.classList.remove("selected");
+    selectedIcon = undefined
+}
