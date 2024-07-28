@@ -107,19 +107,49 @@
                 <p class="headertext">Library</p>
                 <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
             </div>
-            <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 520px; height: 480px; padding: 16px; font-family: Courier; display: flex;">
+            <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 520px; height: 480px; padding: 16px; display: flex;">
                 <p>Hi there</p>
             </div>
         </div>
 
-        <div class="window" id="canvas" style="display: none;">
+        <div class="window" id="canvas_app" style="display: none;">
             <div class="windowheader" id="canvasheader">
                 <div class="closebutton" id="canvasclose"></div>
                 <p class="headertext">Canvas</p>
                 <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
             </div>
-            <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 520px; height: 480px; padding: 16px; font-family: Courier; display: flex;">
-                <p>Hi there</p>
+            <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 520px; height: 480px; padding: 16px; display: flex;">
+                <style>
+                    #canvas_div {
+                        text-align: center;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    canvas {
+                      border: 2px solid black;
+                    }
+                    </style>
+                    
+                    <div id="canvas_div">
+                        <canvas id="canvas" width="500" height="360"></canvas>
+                        <button onclick="clearArea(); return false;">Clear Area</button>
+                        Line width: 
+                        <select id="selWidth" onchange="updateLineWidth()">
+                            <option value="11">11</option>
+                            <option value="13" selected="selected">13</option>
+                            <option value="15">15</option>
+                        </select>
+                        Color: 
+                        <select id="selColor" onchange="updateColor()">
+                            <option value="black">black</option>
+                            <option value="blue" selected="selected">blue</option>
+                            <option value="red">red</option>
+                            <option value="green">green</option>
+                            <option value="yellow">yellow</option>
+                            <option value="gray">gray</option>
+                        </select>
+                    </div>
             </div>
         </div>
 
