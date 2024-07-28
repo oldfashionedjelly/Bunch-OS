@@ -89,7 +89,12 @@ var canvasScreenOpen = document.querySelector("#canvasopen");
 canvasScreenClose.addEventListener("click", () => closeWindow(canvasScreen));
 canvasScreenOpen.addEventListener("click", () => openWindow(canvasScreen));
 
+var musicScreen = document.querySelector("#music");
+var musicScreenClose = document.querySelector("#musicclose");
+var musicScreenOpen = document.querySelector("#musicopen");
 
+musicScreenClose.addEventListener("click", () => closeWindow(musicScreen));
+musicScreenOpen.addEventListener("click", () => openWindow(musicScreen));
 
 
 document.querySelectorAll(".window").forEach(addWindowTapHandling);
@@ -113,7 +118,6 @@ function handleWindowTap(element) {
 
 
 
-// When true, moving the mouse draws on the canvas
 let isDrawing = false;
 let x = 0;
 let y = 0;
@@ -121,9 +125,7 @@ let y = 0;
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 
-// event.offsetX, event.offsetY gives the (x,y) offset from the edge of the canvas.
 
-// Add the event listeners for mousedown, mousemove, and mouseup
 canvas.addEventListener('mousedown', (e) => {
   x = e.offsetX;
   y = e.offsetY;
@@ -165,10 +167,8 @@ function clearArea() {
 
 function updateLineWidth() {
   context.lineWidth = document.getElementById("selWidth").value;
-  // Use 'width' as needed, e.g., update canvas drawing context
 }
 
 function updateColor() {
-  vcontext.strokeStyle = document.getElementById("selColor").value;
-  // Use 'color' as needed, e.g., update canvas drawing context
+  context.strokeStyle = document.getElementById("selColor").value;
 }
